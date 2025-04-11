@@ -1,4 +1,4 @@
-# Kayak Test
+## Kayak Test
 
 
 ## 🛠️ Tech Stack
@@ -213,7 +213,7 @@ try {
 
 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/kayak-test.git
+git clone https://github.com/Desmondgoldsmith/kayak-test.git
 cd kayak-test
 ```
 
