@@ -1,4 +1,6 @@
+ 
  // Helper function to extract error message from API response
+
   export const extractErrorMessage = (errorData) => {
     console.log("Error data:", errorData);
     
@@ -20,7 +22,7 @@
       return errorData.message;
     }
     
-    // Check for validation errors (common in Django REST Framework)
+    // Check for common validation errors 
     if (errorData.non_field_errors && Array.isArray(errorData.non_field_errors)) {
       return errorData.non_field_errors.join(", ");
     }
