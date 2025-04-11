@@ -54,48 +54,49 @@ kayak-test/
 └── README.md
 ```
 
+
+
 ## 🧠 Architecture & How It Works
 
-🧠 Architecture & How It Works
-Atomic Design Pattern
-This project follows the Atomic Design methodology, a design system that breaks interfaces down into fundamental building blocks and then combines them to create complex components and templates. The pattern consists of five distinct levels:
+### Atomic Design Pattern
 
-Atoms: Basic UI elements (buttons, inputs, labels)
-Molecules: Simple groups of UI elements functioning together
-Organisms: Complex UI components composed of molecules and atoms
-Templates: Page-level objects that place components into a layout
-Pages: Specific instances of templates with real content
+This project follows the **Atomic Design** methodology, a design system that breaks interfaces down into fundamental building blocks and then combines them to create complex components and templates. The pattern consists of five distinct levels:
+
+1. **Atoms**: Basic UI elements (buttons, inputs, labels)
+2. **Molecules**: Simple groups of UI elements functioning together
+3. **Organisms**: Complex UI components composed of molecules and atoms
+4. **Templates**: Page-level objects that place components into a layout
+5. **Pages**: Specific instances of templates with real content
 
 In our project structure:
-Atoms
+
+#### Atoms
 Basic UI elements primarily from shadcn/ui components:
+- `/components/ui/button.jsx`
+- `/components/ui/input.jsx`
+- `/components/ui/calendar.jsx`
+- `/components/ui/popover.jsx`
 
-/components/ui/button.jsx
-/components/ui/input.jsx
-/components/ui/calendar.jsx
-/components/ui/popover.jsx
-
-Molecules
+#### Molecules
 Functional groups of atoms that work together to provide specific functionality:
+- `datePickerField.jsx`: Combines calendar, popover, and button components
+- `fileUploader.jsx`: Groups input, labels, and icons for file handling
+- `formComponent.jsx`: Coordinates multiple input components
+- `navbar.jsx`: Combines navigation elements and user profile controls
+- `notification.jsx`: Assembles status icons with message display
+- `tagsField.jsx`: Combines input with formatting logic for tags
 
-datePickerField.jsx: Combines calendar, popover, and button components
-fileUploader.jsx: Groups input, labels, and icons for file handling
-formComponent.jsx: Coordinates multiple input components
-navbar.jsx: Combines navigation elements and user profile controls
-notification.jsx: Assembles status icons with message display
-tagsField.jsx: Combines input with formatting logic for tags
-
-Templates
+#### Templates
 Page-level structures that arrange molecules into functional layouts:
-
-mainContentTemplate.jsx: Orchestrates the entire file upload interface, including form handling, API communication, and user feedback
+- `mainContentTemplate.jsx`: Orchestrates the entire file upload interface, including form handling, API communication, and user feedback
 
 The Atomic Design pattern brings several benefits to this project:
+1. **Reusability**: Components are built to be reused across the application
+2. **Consistency**: UI elements maintain consistent appearance and behavior
+3. **Scalability**: New features can be built from existing components
+4. **Maintainability**: Components are isolated, making them easier to test and update
 
-Reusability: Components are built to be reused across the application
-Consistency: UI elements maintain consistent appearance and behavior
-Scalability: New features can be built from existing components
-Maintainability: Components are isolated, making them easier to test and update
+
 
 ### Core Application Flow
 
